@@ -1,0 +1,19 @@
+@import '../colors/colors';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; 
+    outline: 0px;
+    li{
+        list-style: none;
+    }  
+    a{
+        text-decoration: none;
+    }
+}
+body{
+    background-color: $backGrounColorBody;
+    overflow-y: scroll;
+}

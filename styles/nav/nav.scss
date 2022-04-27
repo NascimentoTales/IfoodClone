@@ -1,0 +1,130 @@
+@import '../colors/colors';
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: $backGrounColorNav;
+   
+    .container{
+        display: flex;
+        flex-direction: row;
+        width: 94%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        .imagem{
+            width: 80px;
+            height: 80px;
+            img{
+                width: 100%;
+            }
+        }
+
+        .menus{
+            display: flex;
+
+            .menuDesk{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .items{
+                    display: flex;
+                    flex-direction: row;
+                    margin-right: 70px;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    .item{
+                        margin-left: 50px;
+                        a{
+                            color: $textColorGray;
+                        }
+                    }
+                }
+                
+                .vagasBtn{
+                    height: 50px;
+                    background-color: $backGrounColorRed;
+                    border: none;
+                    border-radius: 50px;
+                    margin-right: 20px;
+                    width: 180px;
+                    color: $textColorWhite;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    text-align: center;
+                }
+                .vagasBtn:hover{
+                    opacity: 0.7;
+                }
+                .vagasBtn:active{
+                    transform: scale(0.98);
+                }
+                .select-language{
+                    border: none;
+                    padding: 10px;
+                    background-color: $backGrounColorNav;
+                    font-weight: bold;  
+                    // font-size: 1rem; 
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1000px){
+
+    .header{
+        .container{
+            .menus{
+                .menuToggle{
+                    width: 30px;
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+
+                    .one, .two, .tree{
+                        height: 4px;
+                        width: 100%;
+                        background-color: $backGrounColorRed;
+                        margin-bottom: 5px;
+                    }
+
+                }
+                .menuDesk{
+                    display: block;
+                    position: absolute;
+                    top: 70px;
+                    left: -100vw; 
+                    width: 100vw;
+                    height: calc(100vh - 70px) ;
+                    background-color: $backGrounColorNav;
+                    transition: 0.2s;
+                    .items{
+                        text-align: left;
+                        display: block;
+                        margin-left: 25px;
+                        width: 100%;
+                        margin-top: 20px;
+                        .item{
+                            margin-bottom: 25px;
+                            margin-left: 0;
+                        }
+                    }  
+                    .vagas{
+                        display: block;
+                        margin-left: 25px;
+                        margin-bottom: 20px;
+                    }
+                    .select-language{
+                        margin-left: 25px;
+                        font-size: 1rem;
+                    }
+                }
+                .on{
+                    left: 0;
+                }
+            }
+        }   
+    }
+}
